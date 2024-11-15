@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    <script type="text/javascript">
+		function log(msg){
+      var textarea = document.getElementById("log");
+      textarea.innerHTML += (msg + "\n");
+      textarea.scrollTop = textarea.scrollHeight;
+		}
+    function logFPS(msg){
+      var textarea = document.getElementById("logFPS");
+      textarea.innerHTML = (msg + "\n");
+      textarea.scrollTop = textarea.scrollHeight;
+    }
+    </script>
+
+
+    <script type="text/javascript" src="./../common/libs/cuon-matrix.js"></script>
+    <script type="text/javascript" src="./../common/libs/gl-matrix/dist/gl-matrix.js"></script>
+    <script type="text/javascript" src="./../common/libs/matrix-stack.js"></script>
+
+    <script type="text/javascript" src="./../common/shapes/cylinder.js"></script>
+    <script type="text/javascript" src="./../common/shapes/car.js"></script>
+
+    <script type="text/javascript" src="./../common/shapes/car_maker.js"> </script>
+		<script type="text/javascript" src="./../common/shapes/track_maker.js"></script>
+		<script type="text/javascript" src="./../common/shapes/building_maker.js"></script>
+		<script type="text/javascript" src="./../common/shapes/quadrilateral.js"></script>
+    
+    <script type="text/javascript" src="./../common/scenes/scene_0.js"></script>
+    <script type="text/javascript" src="./../common/compute_normals.js"></script>
+		<script type="text/javascript" src="./../common/game.js"></script>
+  	<script type="text/javascript" src="./shaders.js"></script>
+
+    <script type="text/javascript" src="./data.js"></script>
+    <script type="text/javascript" src="./setup.js"></script>
+    <script type="text/javascript" src="./cameras.js"></script>
+    <script type="text/javascript" src="./utils.js"></script>
+    <script type="text/javascript" src="./listeners.js"></script>
+    <script type="text/javascript" src="./draw.js"></script>
+		<script type="text/javascript" src="./main.js"></script>
+
+  </head>
+
+  <body onload="main()">
+<div tabindex="1">
+    <canvas  tabindex='1'
+    	id     = "OUTPUT-CANVAS"
+    	width  = "550px"
+    	height = "550px"
+    	style  = "border: 1px solid black"
+    ></canvas>
+    </div>
+<div>
+	<textarea id="log" rows="15" cols="50"></textarea>
+  <textarea id="logFPS" rows="6" cols="5" style="font-size: 25px;"></textarea>
+</div>
+
+
+    
+  </body>
+
+</html>
+
